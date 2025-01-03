@@ -42,6 +42,8 @@ def split_data(folder_in, fraction_test, fraction_validation):
     list_classes = os.listdir(folder_in)
 
     for i_dir in list_classes:
+        if(i_dir == '.DS_Store'):
+            continue
 
         imgs = os.listdir(os.path.join(folder_in, i_dir))
         num_samples = len(imgs)
